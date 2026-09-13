@@ -9,7 +9,7 @@ import { ThemeProvider } from "@/components/theme-provider.tsx"
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider>
-      <BrowserRouter basename="/choosewhatah">
+      <BrowserRouter>
         <App />
       </BrowserRouter>
     </ThemeProvider>
