@@ -18,12 +18,14 @@ export function LandingPage() {
 	const [finalWinners, setFinalWinners] = useState<Photo[]>([])
 	const [winnerCount, setWinnerCount] = useState(1)
 	const [helpOpen, setHelpOpen] = useState(false)
+	const initialPath = useRef(window.location.pathname)
 
 	useEffect(() => {
-		if (window.location.pathname.endsWith("/matchup") || window.location.pathname.endsWith("/result")) {
+		const openedTournamentRoute = initialPath.current.endsWith("/matchup") || initialPath.current.endsWith("/result")
+		if (openedTournamentRoute && photos.length === 0) {
 			navigate("/upload", { replace: true })
 		}
-	}, [navigate])
+	}, [navigate, photos.length])
 
 	useEffect(() => {
 		if (!helpOpen) return

@@ -8,6 +8,7 @@ import { LegalPage }  from "@/pages/legal"
 export function App() {
   return <Routes>
     <Route element={<LandingPage />}>
+        
       <Route path="upload" element={<UploadPage />} />
       <Route path="matchup" element={<MatchupPage />} />
       <Route path="result" element={<ResultPage />} />
