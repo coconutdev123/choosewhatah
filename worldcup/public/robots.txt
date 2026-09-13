@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://coconut-dev.com/sitemap.xml
+Sitemap: https://choosewhatah.coconut-dev.com/sitemap.xml
