@@ -20,7 +20,7 @@ export function LandingPage() {
 	const [helpOpen, setHelpOpen] = useState(false)
 
 	useEffect(() => {
-		if (window.location.pathname === "/matchup" || window.location.pathname === "/result") {
+		if (window.location.pathname.endsWith("/matchup") || window.location.pathname.endsWith("/result")) {
 			navigate("/upload", { replace: true })
 		}
 	}, [navigate])
